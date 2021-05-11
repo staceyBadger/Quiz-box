@@ -154,6 +154,8 @@ p {
         
     }
     .contacts {
+        display: flex;
+        flex-direction: column;
         margin-top: 13px;
         margin-right: 6px;
     }
@@ -419,7 +421,7 @@ p {
     padding-top: 31px;
     height: 50px;
     padding-bottom: 66px;
-    border-top: solid grey 1px;
+    border-top: solid #9A9A9A 1px;
   }
   .footer__menu__list {
       margin-left: 49px;
@@ -1037,4 +1039,50 @@ p {
 .top__line_reviews {
     background: #17191C url("img/serviceBack.png") no-repeat center;
     padding-bottom: 51px;
+}
+.contacts__wrap {
+    display: inline-block;
+    position: relative;
+}
+.contacts__wrap:hover .contacts__tooltip {
+    left: 0;
+    opacity: 1;
+}
+.contacts__tooltip {
+    position: absolute;
+    background-color: #E7E7E7;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    color: #1E1F20;
+    padding: 10px;
+    width: 160px;
+    height: 55px;
+    top: 100%;
+    left: -9999px;
+    opacity: 0;
+    transition: opacity 2s;
+    margin-top: 10px;
+}
+.contacts__tooltip::before {
+    content: "";
+    display: block;
+    height: 30px;
+    left: 0;
+    right: 0;
+    top: -29px;
+    position: absolute;
+}
+.contacts__tooltip::after {
+    content: "";
+    display: block;
+    border: 14px solid transparent;
+    width: 0px;
+    height: 0px;
+    border-bottom-color: #E7E7E7;
+    border-top-width: 0;
+    position: absolute;
+    top: -14px;
+    left: 108px;
 }
